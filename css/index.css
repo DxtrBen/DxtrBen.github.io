@@ -150,7 +150,7 @@ li.Home{
     flex: 5;
 }
 .textContainer{
-    padding: 0 4rem;
+    padding: 0 2rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -312,7 +312,7 @@ li.Home{
         height: 50%;
     }
     .textContainer .text h1{
-        font-size: 20px;
+        font-size: 40px;
     }
     #bac{
         height: 1000px;
@@ -343,4 +343,15 @@ li.Home{
         width: 50%;
     }
 
+}
+@media (max-width:400px){
+    #about{
+        height: 400px;
+    }
+    #about .left{
+        display: none;
+    }
+    #about .left .textContainer{
+        padding: 0 2rem;
+    }
 }
