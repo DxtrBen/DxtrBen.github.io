@@ -63,7 +63,7 @@ main{
   color: #fff;
   height: 500px;
   width: 100%;
-  background-image: url("/assets/img/photos/background.jpg");
+  background-image: url("assets/img/photos/background.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
