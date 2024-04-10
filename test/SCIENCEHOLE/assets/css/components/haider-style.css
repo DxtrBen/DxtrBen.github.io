@@ -1,0 +1,58 @@
+/*make the header sticky*/
+.sticky{
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+header{
+  z-index: 100;
+  background-color: #181818;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 12px #66666633;
+}
+
+nav.normale-navBar{
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.normale-navBar ul{
+  display: flex;
+}
+nav.normale-navBar ul li{
+  list-style: none;
+  margin: 0 10px;
+}
+nav.normale-navBar ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+/* make a hover to ,nav ul li a, so that they transform to orange un go a litle bit to up with a transition */
+nav.normale-navBar ul li a:hover{
+  color: orange;
+  padding-bottom: 5px;
+  transition: 0.5s;
+  text-decoration: underline;
+} 
+/*Header on query*/
+@media only screen and (max-width: 768px) {
+  header{
+   height: 70px;
+ }
+   header img{
+     width: 300px;
+   }
+ }
+ 
+ /*Responsive Header, when the device is small the header section disappear*/
+ @media screen and (max-width: 768px) {
+   nav.normale-navBar{
+     display: none;
+   }
+ }

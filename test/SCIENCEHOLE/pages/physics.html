@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScienceHole - Discover mathematics</title>
+    <link rel="stylesheet" href="../assets/css/pages/subPagesStyle.css">
+    <link rel="stylesheet" href="../assets/css/components/footer-style.css">
+    <link rel="stylesheet" href="../assets/css/components/haider-style.css">
+    <script src="../assets/js/pages/maths-closeAlert.js"></script>
+</head>
+<body>
+    <!--Create a Header section with a nav -->
+     <!--Create a Header section with a nav -->
+     <header class="sticky">
+        <!--Insert a logo-->
+        <a href="../index.html">
+            <img src="/assets/img/photos/login.png" alt="logo">
+        </a>
+        <!--Insert a nav bar-->
+        <nav class="normale-navBar">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="maths.html">Maths</a></li>
+                <li><a href="chemistry.html">Chimie</a></li>
+                <li><a href="cs.html">Computer Sc.</a></li>
+                <li><a href="#">Se connecter</a></li>
+            </ul>
+        </nav>
+
+        <!--OffCanvas nav bar for smaller device-->
+        <style>
+            #sidebar-active{
+            display: none;
+        }
+        svg{
+            fill: antiquewhite;
+            cursor: pointer;
+        }
+        nav.sidebar-navBar{
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            height: 60px;
+        }
+        .links-container{
+            height: 100%;
+            flex-direction: row;
+            align-items: center;
+            
+        }
+        nav.sidebar-navBar a{
+            height: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        nav.sidebar-navBar a:hover{
+            color: rgba(0, 0, 0, 0.788);
+            background-color: rgba(54, 54, 54, 0.753);
+        }
+        .open-sidebar-btn, .close-sidebar-btn{
+            padding: 20px;
+            display: none;
+        }
+        @media(max-width:720px){
+            nav.sidebar-navBar{
+                display: flex;
+            }
+            .links-container{
+                flex-direction: column;
+                align-items: flex-start;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                z-index: 5;
+                width: 300px;
+                background-color: #181818;
+                box-shadow: -5px 0 5px black;
+                transition: .75s ease-out;
+            }
+            nav.sidebar-navBar a{
+                color: #fff;
+                box-sizing: border-box;
+                height: auto;
+                width: 100%;
+                padding: 20px 30px;
+                justify-content: flex-start;
+            }
+            .open-sidebar-btn, .close-sidebar-btn{
+                display: block;
+            }
+            #sidebar-active:checked ~ .links-container{
+                right: 0;                
+
+            }
+            #sidebar-active:checked ~ #overlay{
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+        }
+        </style>
+        <nav class="sidebar-navBar">
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </label>
+                <!--make 5 anchors-->
+                <a href="../index.html">Accueil</a>
+                <a href="maths.html">Maths</a>
+                <a href="chemistry.html">Chimie</a>
+                <a href="cs.html">Computer Sc.</a>
+                <a href="#">Se connecter</a>
+            </div>
+        </nav>
+    </header>
+    <!--Create a Main section with a h1 and a paragraph -->
+    <main>
+        <div id="toUpp">
+            <h1 id="alert" >Attention, cette section concerne uniquement le 2BAC</h1>
+            <div id="closingLine"></div>
+        </div>        
+        <!--Make three list with 10 li in each-->        
+        <ul class="principal-card">
+            <h2 style="color: #DC143C;">Branche: science maths</h2>
+            <li class="card"><a href="#">Les ondes mécaniques progressives</a></li>
+            <li class="card"><a href="#">Les ondes mécaniques progressives périodiques</a></li>
+            <li class="card"><a href="#">La propagation des ondes lumineuses</a></li>
+            <li class="card"><a href="#">Les transformations nucléaires</a></li>
+            <li class="card"><a href="#">Le noyau (Masse et énergie)</a></li>
+            <li class="card"><a href="#">Le dipôle RC</a></li>
+            <li class="card"><a href="#">Le dipôle RL</a></li>
+            <li class="card"><a href="#">Les oscillations libres d’un circuit RLC</a></li>
+            <li class="card"><a href="#">Les lois de Newton</a></li>
+            <li class="card"><a href="#">La chute libre verticale d’un solide</a></li>
+            <li class="card"><a href="#">Mouvements plans : Projectile dans le champ de pesanteur</a></li>
+            <li class="card"><a href="#">Mouvement des satellites et des planètes</a></li>
+            <li class="card"><a href="#">Mouvement de rotation d’un solide autour d’un axe fixe</a></li>
+            <li class="card"><a href="#">Oscillateurs mécaniques</a></li>
+            <li class="card"><a href="#">Aspects énergétiques</a></li>
+            <li class="card"><a href="#">Atome et mécanique de Newton</a></li>
+        </ul>
+        <ul class="principal-card">
+            <h2 style="color: #4169e1;">Branche: Science Physique</h2>
+            <li class="card"><a href="#">Les ondes mécaniques progressives</a></li>
+            <li class="card"><a href="#">Les ondes mécaniques progressives périodiques</a></li>
+            <li class="card"><a href="#">La propagation des ondes lumineuses</a></li>
+            <li class="card"><a href="#">Les transformations nucléaires</a></li>
+            <li class="card"><a href="#">Le noyau (Masse et énergie)</a></li>
+            <li class="card"><a href="#">Le dipôle RC</a></li>
+            <li class="card"><a href="#">Le dipôle RL</a></li>
+            <li class="card"><a href="#">Les oscillations libres d’un circuit RLC</a></li>
+            <li class="card"><a href="#">Ondes électromagnétiques et modulation d'amplitude</a></li>
+            <li class="card"><a href="#">Les lois de Newton</a></li>
+            <li class="card"><a href="#">La chute libre verticale d’un solide</a></li>
+            <li class="card"><a href="#">Le mouvement d’un projectile dans un plan</a></li>
+            <li class="card"><a href="#">Le mouvement de rotation d’un solide autour d’un axe fixe</a></li>
+            <li class="card"><a href="#">Les systèmes mécaniques oscillants</a></li>
+            <li class="card"><a href="#">Les aspects énergétiques des oscillations mécaniques</a></li>
+        </ul>
+        <ul class="principal-card">
+            <h2 style="color: #26e200;">Branche: Science de la vie et de la terre</h2>
+            <li class="card"><a href="#">Les ondes mécaniques progressives</a></li>
+            <li class="card"><a href="#">Les ondes mécaniques progressives périodiques</a></li>
+            <li class="card"><a href="#">La propagation des ondes lumineuses</a></li>
+            <li class="card"><a href="#">Les transformations nucléaires</a></li>
+            <li class="card"><a href="#">Le noyau (Masse et énergie)</a></li>
+            <li class="card"><a href="#">Le dipôle RC</a></li>
+            <li class="card"><a href="#">Le dipôle RL</a></li>
+            <li class="card"><a href="#">Les oscillations libres d’un circuit RLC</a></li>
+            <li class="card"><a href="#">Ondes électromagnétiques et modulation d'amplitude</a></li>
+            <li class="card"><a href="#">Les lois de Newton</a></li>
+            <li class="card"><a href="#">La chute libre verticale d’un solide</a></li>
+            <li class="card"><a href="#">Le mouvement d’un projectile dans un plan</a></li>
+            <li class="card"><a href="#">Le mouvement de rotation d’un solide autour d’un axe fixe</a></li>
+            <li class="card"><a href="#">Les systèmes mécaniques oscillants</a></li>
+            <li class="card"><a href="#">Les aspects énergétiques des oscillations mécaniques</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>Copyright - <b><em>Rayan Benali Amjoud</em></b> &copy; 2024 <NAME></p>
+        <a href="#">Privacy Policy</a>
+    </footer>
+</body>
+</html>

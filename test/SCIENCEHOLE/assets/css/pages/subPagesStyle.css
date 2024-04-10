@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+/*the main section*/
+main{
+    margin-top: 10px;
+    background-color: #f8fafd;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main #toUpp{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    transition: 10s ease;
+  }
+  main #alert{
+    color: whitesmoke; 
+    background-color: #dc143cb4;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    position: absolute;
+    top: 90px;
+    font-size: 20px;
+    z-index: 3;
+    left: 0;
+    transition: 10s ease-in;
+  }
+  main #closingLine{
+    width: 0%;
+    height: 3px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    top: 130px;
+    left: 0;
+    transition: 2s ease-in;
+    box-shadow:0 0 12px #dc143c ;
+  }
+/* Listes */
+main ul{
+    width: 400px;
+    height: 500px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+main ul h2{
+    text-align: center;
+}
+ul li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+
+}
+main ul.principal-card{
+    width: 700px;
+    height: fit-content;
+    background-color: #91f7ee18;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 15px #66666633;
+    padding: 30px;
+}
+
+main ul.principal-card .card{
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 15px #66666633;
+    padding: 10px;
+}
+main ul.principal-card .card:hover{
+    text-shadow: 0 0 12px #7cff62;
+}
+
+/*Media queries*/
+@media only screen and (max-width: 768px) {
+    main ul.principal-card{
+        width: 100%;
+        height: fit-content;
+        background-color: #91f7ee18;
+        display: flex;
+        justify-content:start;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px;
+        box-shadow: 0 0 15px #66666633;
+        padding: 30px;
+    }
+    main ul.principal-card .card{
+        width: 100%;
+        height: fit-content;
+        background-color: #fff;
+        display: flex;
+        justify-content:start;
+        align-items: center;
+        flex-direction: row;
+        border-radius: 10px;
+        margin: 10px;
+        box-shadow: 0 0 15px #66666633;
+        padding: 10px;
+    }
+    main{
+        margin-top: 30px;
+    }
+    main #alert{
+        top: 70px;
+    }
+    main #closingLine{
+        top: 130px;
+    }
+    main #toUpp{
+        top: 0px;
+    }
+}
+@media screen and (max-width: 768px) {
+    footer p{
+      font-size: 13px;
+    }
+    footer a{
+      font-size: 13px;
+    }
+  }

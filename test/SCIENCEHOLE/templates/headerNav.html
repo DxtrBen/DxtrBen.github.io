@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav test</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #sidebar-active{
+            display: none;
+        }
+        svg{
+            /* fill: antiquewhite; */
+        }
+        nav{
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            height: 60px;
+        }
+        .links-container{
+            height: 100%;
+            flex-direction: row;
+            align-items: center;
+            
+        }
+        nav a{
+            height: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .open-sidebar-btn, .close-sidebar-btn{
+            padding: 20px;
+            display: none;
+        }
+        @media(max-width:720px){
+            nav{
+                display: flex;
+            }
+            .links-container{
+                flex-direction: column;
+                align-items: flex-start;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                z-index: 5;
+                width: 300px;
+                background-color: black;
+                box-shadow: -5px 0 5px black;
+                transition: .75s ease-out;
+            }
+            nav a{
+                box-sizing: border-box;
+                height: auto;
+                width: 100%;
+                padding: 20px 30px;
+                justify-content: flex-start;
+            }
+            .open-sidebar-btn, .close-sidebar-btn{
+                display: block;
+            }
+            #sidebar-active:checked ~ .links-container{
+                right: 0;                
+
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <nav class="sidebar-navBar">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+            <!--make 5 anchors-->
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </nav>
+</body>
+</html>
